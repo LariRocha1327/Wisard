@@ -3,14 +3,20 @@
 #include <math.h>
 
 int main(){
-  int mat [9][9];
-  int i,j;
+  int matquad [9][9];
   
-  For(i=0;i<9;i++){
-    For(j=0;j<9;j++){ 
-      
-    
-    
+  
+  
+}
+
+int quadrado(matquad [9][9]){
+    int i,j;
+    for(i=0;i<9;i++){
+        for(i=0;i<9;i++){
+            if(){
+                matquad[i][j]=1;
+            }
+        }
     }
-   }
+    
 }
