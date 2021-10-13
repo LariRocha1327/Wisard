@@ -4,21 +4,15 @@
 
 int main(){
   int matquad [3][3];
-  
-  
-  
-}
-
-int quadrado(matquad [3][3]){
-    int i,j;
-    for(i=0;i<3;i++){
-        for(i=0;i<3;i++){
+  int i,j;
+    for(i=0;i<3;i++)
+        for(j=0;j<3;j++){
                 matquad[1][j]=1;
-                matquad[i][1]=1;
                 matquad[3][j]=1;
+                matquad[i][1]=1;
                 matquad[i][3]=1;
                 
         }
-    }
-    
+    printf("%d",matquad[i][j]);
+    return 0;
 }
