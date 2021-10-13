@@ -3,7 +3,14 @@
 #include <math.h>
 
 int main(){
-  int mat [10][10];
+  int mat [9][9];
+  int i,j;
   
-
+  For(i=0;i<9;i++){
+    For(j=0;j<9;j++){ 
+      
+    
+    
+    }
+   }
 }
