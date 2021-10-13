@@ -3,19 +3,21 @@
 #include <math.h>
 
 int main(){
-  int matquad [9][9];
+  int matquad [3][3];
   
   
   
 }
 
-int quadrado(matquad [9][9]){
+int quadrado(matquad [3][3]){
     int i,j;
-    for(i=0;i<9;i++){
-        for(i=0;i<9;i++){
-            if(){
-                matquad[i][j]=1;
-            }
+    for(i=0;i<3;i++){
+        for(i=0;i<3;i++){
+                matquad[1][j]=1;
+                matquad[i][1]=1;
+                matquad[3][j]=1;
+                matquad[i][3]=1;
+                
         }
     }
     
