@@ -4,15 +4,22 @@
 
 int main(){
   int matquad [3][3];
-  int i,j;
+  int mattrig [3][3];
+  int matcirc [3][3];
+  int i,j,q,t,c;
     for(i=0;i<3;i++)
         for(j=0;j<3;j++){
-                matquad[1][j]=1;
-                matquad[3][j]=1;
-                matquad[i][1]=1;
-                matquad[i][3]=1;
+                matquad[0][j]=1;
+                matquad[2][j]=1;
+                matquad[i][0]=1;
+                matquad[i][2]=1;
                 
         }
-    printf("%d",matquad[i][j]);
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            printf("%d",matquad[i][j]);
+            printf("\t");
+        }
+    }
     return 0;
 }
