@@ -9,7 +9,7 @@ int main(){
   int matrizcirculo [3][3];
   
   quadrado( matrizquadrado [3][3]); //chamada de função quadrado
-  //chamar função compara
+                                    //chamar função compara
   return 0;
 }
 
@@ -40,8 +40,9 @@ int quadrado(int  matrizquadrado[3][3]){
 
 
 //comparar matrizes
-int compara(matriz){  
-    int i,j;
+
+int compara(matrizquadrado[3][3],matriztriangulo[3][3], matrizcirculo[3][3]){  
+    int i,j,c,t,q;
     int matriz[3][3];
     printf ("\nDigite valor para os elementos da matriz\n\n");
  
@@ -80,22 +81,17 @@ int compara(matriz){
            if (matriz[i][j] == matrizcirculo[i][j])
            {
              c=c+1;
-     }
-     if (q>t&&c)
-     {
-       printf ("\nVocê inseriu um quadrado");
-     }
-     else
-     {
-       if (t>q&&c)
-       {
-         printf ("\nVocê inseriu um triângulo");
-       }
-       else
-       {
-         if (c>q&&t)
-         {
+            }
+        if (q>t&&c){
+            printf ("\nVocê inseriu um quadrado");
+        }
+        else{
+            if (t>q&&c){
+                printf ("\nVocê inseriu um triângulo");
+            }
+       else{
+         if (c>q&&t){
            printf ("\nVocê inseriu um círculo");
-     }
-}
+        }
+    }
 }
