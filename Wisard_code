@@ -22,12 +22,16 @@ int quadrado(int  matrizquadrado[3][3]){
     //preencher matriz do quadrado
     for(i=0;i<3;i++){
         for(j=0;j<3;j++){
-                matrizquadrado[0][j]=1;
-                matrizquadrado[2][j]=1;
-                matrizquadrado[i][0]=1;
-                matrizquadrado[i][2]=1;
-                
-        }
+          matrizquadrado[0][j]=1;
+          matrizquadrado[2][j]=1;
+          matrizquadrado[i][0]=1;
+          matrizquadrado[i][2]=1;
+
+           if(matrizquadrado[i][j]!= matrizquadrado[0][j]&& matrizquadrado[2][j])&& matrizquadrado[i][0])&& matrizquadrado[i][2]){
+              matrizquadrado[i][j]=0;
+            }
+        }     
+      }
     }
     //printar matriz
    for(i=0;i<3;i++){
@@ -39,7 +43,33 @@ int quadrado(int  matrizquadrado[3][3]){
     
 }
 
+//criar Triangulo base
 
+int Triangulo (int matriztriangulo[3][3]){
+    int i,j;
+    int matriztriangulo[3][3];
+        
+    for(i=0;i<3;i++){
+      for(j=0;j<3;j++){
+        matriztriangulo[2][j]=1;
+        matriztriangulo[0][1]=1;
+                  
+        if(matriztriangulo[i][j]!= matriztriangulo[2][j]&& matriztriangulo[0][1]){
+          matriztriangulo[i][j]=0;
+        }
+                  
+      }
+    }
+    //printar matriz
+    for(i=0;i<3;i++){
+      for(j=0;j<3;j++){
+        printf("%d", matriztriangulo[i][j]);
+        printf("\t");
+      }
+    }
+}
+    
+    
 //comparar matrizes
 
 int compara(matrizquadrado[3][3],matriztriangulo[3][3], matrizcirculo[3][3]){  
@@ -48,8 +78,7 @@ int compara(matrizquadrado[3][3],matriztriangulo[3][3], matrizcirculo[3][3]){
     printf ("\nDigite valor para os elementos da matriz\n\n");
  
    for ( i=0; i<3; i++ )
-     for ( j=0; j<3; j++ )
-     {
+     for ( j=0; j<3; j++ ){
        printf ("\nElemento[%d][%d] = ", i, j);
        scanf ("%d", &matriz[i][j]);
        if (matriz[i][j] == matrizquadrado[i][j])
