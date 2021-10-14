@@ -2,24 +2,100 @@
 #include <stdlib.h>
 #include <math.h>
 
+//função principal
 int main(){
-  int matquad [3][3];
-  int mattrig [3][3];
-  int matcirc [3][3];
-  int i,j,q,t,c;
-    for(i=0;i<3;i++)
-        for(j=0;j<3;j++){
-                matquad[0][j]=1;
-                matquad[2][j]=1;
-                matquad[i][0]=1;
-                matquad[i][2]=1;
-                
-        }
+  int matrizquadrado [3][3];
+  int matriztriangulo [3][3];
+  int matrizcirculo [3][3];
+  
+  quadrado( matrizquadrado [3][3]); //chamada de função quadrado
+  //chamar função compara
+  return 0;
+}
+
+//criar quadrado
+
+int quadrado(int  matrizquadrado[3][3]){    
+    
+    int i,j;
+    
+    //preencher matriz do quadrado
     for(i=0;i<3;i++){
         for(j=0;j<3;j++){
-            printf("%d",matquad[i][j]);
+                matrizquadrado[0][j]=1;
+                matrizquadrado[2][j]=1;
+                matrizquadrado[i][0]=1;
+                matrizquadrado[i][2]=1;
+                
+        }
+    }
+    //printar matriz
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
             printf("\t");
         }
     }
-    return 0;
+    
+}
+
+
+//comparar matrizes
+int compara(matriz){  
+    int i,j;
+    int matriz[3][3];
+    printf ("\nDigite valor para os elementos da matriz\n\n");
+ 
+   for ( i=0; i<3; i++ )
+     for ( j=0; j<3; j++ )
+     {
+       printf ("\nElemento[%d][%d] = ", i, j);
+       scanf ("%d", &matriz[i][j]);
+       if (matriz[i][j] == matrizquadrado[i][j])
+       {
+         q=q+1;
+         if (matriz[i][j] == matriztriangulo[i][j])
+         {
+           t=t+1;
+           if (matriz[i][j] == matrizcirculo[i][j])
+           {
+             c=c+1;
+         }
+         else
+         {
+           if (matriz[i][j] == matrizcirculo[i][j])
+           {
+             c=c+1;
+       }
+       else
+       {
+         if (matriz[i][j] == matriztriangulo[i][j])
+          {
+           t=t+1;
+           if (matriz[i][j] == matrizcirculo[i][j])
+           {
+             c=c+1;
+         }
+         else
+         {
+           if (matriz[i][j] == matrizcirculo[i][j])
+           {
+             c=c+1;
+     }
+     if (q>t&&c)
+     {
+       printf ("\nVocê inseriu um quadrado");
+     }
+     else
+     {
+       if (t>q&&c)
+       {
+         printf ("\nVocê inseriu um triângulo");
+       }
+       else
+       {
+         if (c>q&&t)
+         {
+           printf ("\nVocê inseriu um círculo");
+     }
+}
 }
