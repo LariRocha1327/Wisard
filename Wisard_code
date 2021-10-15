@@ -4,54 +4,88 @@
 
 //função principal
 int main(){
-  int matrizquadrado[3][3];
-  int matriztriangulo[3][3];
-  int matrizcirculo[3][3];
-  int matriz[3][3];
+  int matrizquadrado[5][5];
+  int matriztriangulo[5][5];
+  int matrizcirculo[5][5];
+  int matriz[5][5];
   int i,j,c,t,q;
   
   //criar quadrado base
   
     //preencher matriz do quadrado
-    for(i=0;i<3;i++){
-        for(j=0;j<3;j++){
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
           matrizquadrado[0][j]=1;
-          matrizquadrado[2][j]=1;
+          matrizquadrado[4][j]=1;
           matrizquadrado[i][0]=1;
-          matrizquadrado[i][2]=1;
-          matrizquadrado[1][1]=0;
+          matrizquadrado[i][4]=1;
+         if(matrizquadrado[i][j]!=matrizquadrado[0][j]&&matrizquadrado[4][j]&&matrizquadrado[i][0]&&matrizquadrado[i][4]){
+         
+             matrizquadrado[i][j]=0;
+         }
           
         }     
     }
     //printar matriz (não necessário)
-   for(i=0;i<3;i++){
-     printf("(");
-        for(j=0;j<3;j++){
+   for(i=0;i<5;i++){
+     printf("|");
+        for(j=0;j<5;j++){
             printf(" %d ", matrizquadrado[i][j]);
         }
-      printf(")\n");
+      printf("|\n");
     }
     
+    
     //criar Triangulo base
-    printf("\n"); 
-    for(i=0;i<3;i++){
-      for(j=0;j<3;j++){
-        matriztriangulo[2][j]=1;
-        matriztriangulo[0][1]=1;
+    printf("\n\n"); 
+    for(i=0;i<5;i++){
+      for(j=0;j<5;j++){
+        matriztriangulo[3][j]=1;
+        matriztriangulo[1][2]=1;
+        matriztriangulo[2][1]=1;
+        matriztriangulo[2][3]=1;
                   
-        if(matriztriangulo[i][j]!= matriztriangulo[2][j]&& matriztriangulo[0][1]){
+        if(matriztriangulo[i][j]!= matriztriangulo[3][j]&& matriztriangulo[1][2]&&matriztriangulo[2][1]&&matriztriangulo[2][3]){
           matriztriangulo[i][j]=0;
         }
                   
       }
     }
     //printar matriz (não necessário)
-    for(i=0;i<3;i++){
-     printf("(");
-        for(j=0;j<3;j++){
+    for(i=0;i<5;i++){
+     printf("|");
+        for(j=0;j<5;j++){
             printf(" %d ", matriztriangulo[i][j]);
         }
-      printf(")\n");
+      printf("|\n");
+    }
+    
+    //criar circulo base
+    printf("\n"); 
+    for(i=0;i<5;i++){
+      for(j=0;j<5;j++){
+        matrizcirculo[0][j]=1;
+        matrizcirculo[4][j]=1;
+        matrizcirculo[i][0]=1;
+        matrizcirculo[i][4]=1;
+        matrizcirculo[0][0]=0;
+        matrizcirculo[0][4]=0;
+        matrizcirculo[4][0]=0;
+        matrizcirculo[4][4]=0;
+        
+            if(matrizcirculo[i][j]!=matrizcirculo[0][j]&&matrizcirculo[4][j]&&matrizcirculo[i][0]&&matrizcirculo[i][4]){
+             
+                 matrizcirculo[i][j]=0;
+            }
+      }
+    }
+    //printar matriz (não necessário)
+    for(i=0;i<5;i++){
+        printf("|");
+        for(j=0;j<5;j++){
+            printf(" %d ", matrizcirculo[i][j]);
+        }
+      printf("|\n");
     }
     
     //comparar matrizes
@@ -59,8 +93,8 @@ int main(){
 
     printf ("\nDigite valor para os elementos da matriz\n\n");
  
-   for ( i=0; i<3; i++ )
-     for ( j=0; j<3; j++ ){
+   for ( i=0; i<5; i++ )
+     for ( j=0; j<5; j++ ){
            printf ("\nElemento[%d][%d] = ", i, j);
            scanf ("%d", &matriz[i][j]);
            if (matriz[i][j] == matrizquadrado[i][j])
