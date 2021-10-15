@@ -7,9 +7,14 @@ int main(){
   int matrizquadrado [3][3];
   int matriztriangulo [3][3];
   int matrizcirculo [3][3];
+
   
-  quadrado( matrizquadrado [3][3]); //chamada de função quadrado
-                                    //chamar função compara
+  quadrado( int matrizquadrado [3][3]);  //chamada de função quadrado
+  triangulo( int matriztriangulo [3][3]);//chamar função triangulo
+  circulo( int matrizcirculo [3][3]);    //chamar função circulo
+  compara(int matriz[3][3]);             //chamar função compara
+
+
   return 0;
 }
 
@@ -35,17 +40,18 @@ int quadrado(int  matrizquadrado[3][3]){
     }
     //printar matriz
    for(i=0;i<3;i++){
+     print(" (");
         for(j=0;j<3;j++){
-            printf("%d", matrizquadrado[i][j]);
-            printf("\t");
+            printf("%d[", matrizquadrado[i][j]);
         }
+      printf(")\n");
     }
     
 }
 
 //criar Triangulo base
 
-int Triangulo (int matriztriangulo[3][3]){
+int triangulo (int matriztriangulo[3][3]){
     int i,j;
     int matriztriangulo[3][3];
         
@@ -62,10 +68,11 @@ int Triangulo (int matriztriangulo[3][3]){
     }
     //printar matriz
     for(i=0;i<3;i++){
-      for(j=0;j<3;j++){
-        printf("%d", matriztriangulo[i][j]);
-        printf("\t");
-      }
+     print(" (");
+        for(j=0;j<3;j++){
+            printf("%d ", matriztriangulo[i][j]);
+        }
+      printf(")\n");
     }
 }
     
